@@ -10,9 +10,9 @@ export const setPlatformAvailability = async (countryId: string, platformId: str
     });
 };
 
-const getAvailablePlatformsByCountry = async(countryId: string) => {
+export const getAvailablePlatformsByCountry = async(countryId: string) => {
     return await prisma.platformAvailability.findMany({
         where: { countryId, available: true },
         include: {platform: true},
-    })
-}
+    });
+};
