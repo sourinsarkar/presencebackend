@@ -1,6 +1,5 @@
 import { Request, Response } from "express"; 
 import { asyncHandler } from "../utils/asyncHandler";
-import { createPlatform,  } from "../services/platformService";
 import { getAvailablePlatformsByCountry, setPlatformAvailability } from "../services/availabilityService";
 
 export const setAvailability = asyncHandler(async(req: Request, res: Response) => {
