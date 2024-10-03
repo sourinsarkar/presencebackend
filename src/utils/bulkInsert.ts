@@ -35,17 +35,17 @@ const bulkInsert = async() => {
         // }));
         
         // Insert Platforms
-        for (let i = 0; i < jsonData.platforms.length; i += BATCH_SIZE) {
-            const batch = jsonData.platforms.slice(i, i + BATCH_SIZE);
-            await prisma.$transaction (
-                batch.map((platform: any) =>
-                prisma.platform.upsert({
-                    where: { name: platform.name },
-                    update: {},
-                    create: { name: platform.name }
-                })) 
-            )
-        }
+        // for (let i = 0; i < jsonData.platforms.length; i += BATCH_SIZE) {
+        //     const batch = jsonData.platforms.slice(i, i + BATCH_SIZE);
+        //     await prisma.$transaction (
+        //         batch.map((platform: any) =>
+        //         prisma.platform.upsert({
+        //             where: { name: platform.name },
+        //             update: {},
+        //             create: { name: platform.name }
+        //         })) 
+        //     )
+        // }
 
         // await Promise.all(jsonData.platforms.map(async(platform: any) => {
         //     await prisma.platform.upsert ({

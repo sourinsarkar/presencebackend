@@ -252,7 +252,7 @@
         { "name": "Vatican City", "code": "VA" }
     ],
 
-    "platform": [
+    "platforms": [
         { "name": "PayPal" },
         { "name": "Stripe" },
         { "name": "Razorpay" }
